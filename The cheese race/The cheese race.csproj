@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE4F2258-7E53-4D54-A479-B41F9EF279A8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>The_cheese_race</RootNamespace>
+    <AssemblyName>The cheese race</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AudioSwitcher.AudioApi, Version=3.0.0.209, Culture=neutral, PublicKeyToken=fda5729e2db3a64f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AudioSwitcher.AudioApi.3.0.0\lib\net40\AudioSwitcher.AudioApi.dll</HintPath>
+    </Reference>
+    <Reference Include="AudioSwitcher.AudioApi.CoreAudio, Version=3.0.0.209, Culture=neutral, PublicKeyToken=fda5729e2db3a64f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AudioSwitcher.AudioApi.CoreAudio.3.0.0.1\lib\net40\AudioSwitcher.AudioApi.CoreAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Core.2.0.0\lib\netstandard2.0\NAudio.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnnonceVainqueur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnnonceVainqueur.Designer.cs">
+      <DependentUpon>AnnonceVainqueur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonEllipse.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ChooseLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseLanguage.Designer.cs">
+      <DependentUpon>ChooseLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Donnees publics.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formexit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formexit.Designer.cs">
+      <DependentUpon>Formexit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="players name.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="players name.Designer.cs">
+      <DependentUpon>players name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RulesRO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RulesRO.Designer.cs">
+      <DependentUpon>RulesRO.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AnnonceVainqueur.resx">
+      <DependentUpon>AnnonceVainqueur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseLanguage.resx">
+      <DependentUpon>ChooseLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formexit.resx">
+      <DependentUpon>Formexit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="players name.resx">
+      <DependentUpon>players name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RulesRO.resx">
+      <DependentUpon>RulesRO.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plateau jeu.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue mouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green mouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple mouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red mouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fromage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green button.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red button1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple button1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue button1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\green button1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quatre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trois.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\un.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pnt intero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pnt excla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\des.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\des lancer.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fleche droite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fleche gauche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fleche gauche1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fleche gauche2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fleche droite1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fleche tt droit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fleche tt droit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fleche arriere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecheright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecheleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecheback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecheface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecheface1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecheright1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecheback1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecheleft1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lol.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green mouse270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green mouse0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green mouse90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple mouse90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple mouse180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple mouse270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red mouse270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red mouse0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red mouse90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue mouse90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue mouse180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue mouse270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondplayers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\souris exit.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sourismur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soncoupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soncours.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\On My Way.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presentationplateau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ENdrapeau.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FRdrapeau.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROdrapeau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bluedroit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bluedroit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NumJuc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SecChance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cani1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cani2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cani3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cani4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cani5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayEx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teleport4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teleport3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teleport5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teleport2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teleport1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GifTambour.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Roulements de tambour.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tada.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WinnerIs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManyWin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WinMany.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManyWin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winnerisrules.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manywinnersrules.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu22.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
